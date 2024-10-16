@@ -1,4 +1,4 @@
-# Vue.js 3 Learning Journey 📚
+# Vue.js 3 📚
 
 This repository contains projects I'm building while learning Vue.js 3, following the book *Building Real-World Web Applications with Vue.js 3*. Each project focuses on different concepts and features of Vue.js.
 
