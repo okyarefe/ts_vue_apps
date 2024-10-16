@@ -31,6 +31,7 @@ const fetchWeather = async (
     }
 
     return data;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return null;
   }
