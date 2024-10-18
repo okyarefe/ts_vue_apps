@@ -16,6 +16,8 @@ const MARVEL_SECRET_KEY = process.env.MARVEL_API_SECRET;
 const ts = new Date().getTime();
 const hash = md5(ts + MARVEL_SECRET_KEY + MARVEL_PUBLIC_KEY);
 const marvelRequestUrl = `${MARVEL_API_ENDPOINT}?ts=${ts}&apikey=${MARVEL_PUBLIC_KEY}&hash=${hash}`;
+const ITEMS_PER_PAGE = 20;
+
 app.listen(5000, () => console.log(`Server is running on ${port}`));
 
 // Endpoints for weather API
@@ -38,7 +40,9 @@ app.get("/weatherapi", async (req, res) => {
 app.get("/marvel", async (req, res) => {
   console.log("Request to /marvel ");
   try {
-    const response = await fetch(marvelRequestUrl);
+    const { page } = req.query;
+    const pagination = page ? `&offset=${page * ITEMS_PER_PAGE}` : "";
+    const response = await fetch(marvelRequestUrl + pagination);
 
     const data = await response.json();
     console.log(data.data);
