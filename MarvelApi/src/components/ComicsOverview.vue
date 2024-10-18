@@ -20,8 +20,6 @@ if (route.params.page) {
 }
 
 const getComics = async () => {
-  console.log("IN FUNC", typeof currentPage.value);
-
   isLoading.value = true;
 
   const comics = await useComics(currentPage.value);
