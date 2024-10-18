@@ -11,3 +11,10 @@ Here’s a brief description of each project included in this repository:
    - **Status:** Completed ✅
 
 
+### 1. [MarvelApi](./MarvelApi)
+   - **Description:** A simple app that fetches and displays data from the Marvel API.
+   - **Concepts Covered:** API integration, SPA routing, custom composables, data search and handling.
+   - **Status:** In progress
+
+
+
